@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Control_Script : MonoBehaviour
 {
-    public List<GameObject> paddle =  new List<GameObject>();
+    public List<int> paddle =  new List<int>();
 
 
     // Start is called before the first frame update

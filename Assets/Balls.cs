@@ -9,6 +9,8 @@ public class Balls : MonoBehaviour
 
   Control_Script _control_Script;
 
+  [SerializeField] int pad_Num;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ void OnCollisionEnter2D(Collision2D collision)
   if(collision.gameObject.tag == "Ball")
   {
 
-    _control_Script.paddle.Add(gameObject);
+    _control_Script.paddle.Add(pad_Num);
 
     // Collider2D myCollider = collision.GetContact(0).otherCollider;
     // Debug.Log("this col is " + myCollider);

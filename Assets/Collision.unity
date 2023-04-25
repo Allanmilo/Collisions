@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 754134376}
   m_Layer: 0
   m_Name: TheBalls
-  m_TagString: Untagged
+  m_TagString: TheBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff27f4170a164f46a305447b9039ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paddle: 
 --- !u!4 &754134378
 Transform:
   m_ObjectHideFlags: 0
@@ -163,8 +164,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1680264050}
   - {fileID: 1855477823}
+  - {fileID: 1680264050}
   - {fileID: 1727243331}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -280,11 +281,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680264049}
   m_LocalRotation: {x: -0, y: -0, z: 0.47287703, w: 0.88112843}
-  m_LocalPosition: {x: -1.2, y: 2.3, z: 0}
+  m_LocalPosition: {x: -0.91, y: -3.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 754134378}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 56.442}
 --- !u!58 &1680264051
 CircleCollider2D:
@@ -314,6 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393d4fff694f85241a5364f33c7354e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pad_Num: 0
 --- !u!212 &1680264053
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -414,7 +416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727243330}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.74, y: 3.46, z: 0}
+  m_LocalPosition: {x: 0.93, y: -3.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 754134378}
@@ -520,6 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393d4fff694f85241a5364f33c7354e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pad_Num: 2
 --- !u!1 &1753901026
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,11 +691,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855477822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11, y: 2.31, z: 0}
+  m_LocalPosition: {x: -0.01, y: 1.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 754134378}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1855477824
 CircleCollider2D:
@@ -722,6 +725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393d4fff694f85241a5364f33c7354e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pad_Num: 1
 --- !u!212 &1855477826
 SpriteRenderer:
   m_ObjectHideFlags: 0
