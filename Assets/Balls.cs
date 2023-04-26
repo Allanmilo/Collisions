@@ -11,6 +11,10 @@ public class Balls : MonoBehaviour
 
   [SerializeField] int pad_Num;
 
+  bool onOff = false;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,9 +34,16 @@ void OnCollisionEnter2D(Collision2D collision)
 {
   if(collision.gameObject.tag == "Ball")
   {
-
     _control_Script.paddle.Add(pad_Num);
+    _control_Script.pickPaddle();
 
+       if(_control_Script.randomNum == pad_Num)
+       {
+        Debug.Log("random is " + _control_Script.randomNum);
+          Debug.Log("This paddle is " + pad_Num);
+       }
+
+  }
     // Collider2D myCollider = collision.GetContact(0).otherCollider;
     // Debug.Log("this col is " + myCollider);
     // Now do whatever you need with myCollider.
@@ -41,4 +52,5 @@ void OnCollisionEnter2D(Collision2D collision)
   }
 }
 
-}
+
+
