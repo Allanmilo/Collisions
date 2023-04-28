@@ -12,11 +12,15 @@ public class Control_Script : MonoBehaviour
 
     int listPick;
 
+    public int paddle_Num;
+
+    public bool onOff;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        onOff = false;
     }
 
     // Update is called once per frame
@@ -31,10 +35,13 @@ public class Control_Script : MonoBehaviour
 
     public void pickPaddle()
     {
-        listPick = paddle.Count -1;
+        listPick = paddle.Count;
+                Debug.Log("1 listPick is " + listPick);
         randomNum = Random.Range(0, listPick);
-    
-        // paddle.RemoveRange ( 0 , paddle.Count() );
-        paddle.RemoveAll(item => item >= 0);
+                Debug.Log("2 First random is " + randomNum);
+        paddle_Num = paddle[randomNum];
+                Debug.Log("3 paddle num is " + paddle_Num);
+        // paddle.RemoveRange ( 0 , paddle.Count() 
+       
     }
 }
