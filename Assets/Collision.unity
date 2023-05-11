@@ -149,13 +149,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 754134375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ff27f4170a164f46a305447b9039ea0, type: 3}
+  m_Script: {fileID: 11500000, guid: 16184b00510001e4e98a139ec265e67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddle: 
+  paddle: []
   randomNum: 0
+  listPick: 0
   paddle_Num: 0
   onOff: 0
+  stop_Col: 0
+  ball_Ran: {fileID: 0}
 --- !u!4 &754134378
 Transform:
   m_ObjectHideFlags: 0
@@ -268,9 +271,9 @@ GameObject:
   - component: {fileID: 1680264053}
   - component: {fileID: 1680264051}
   - component: {fileID: 1680264054}
-  - component: {fileID: 1680264052}
   - component: {fileID: 1680264056}
   - component: {fileID: 1680264055}
+  - component: {fileID: 1680264052}
   m_Layer: 0
   m_Name: Ball01
   m_TagString: Ball
@@ -286,7 +289,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680264049}
   m_LocalRotation: {x: -0, y: -0, z: 0.47287703, w: 0.88112843}
-  m_LocalPosition: {x: 1.29, y: 3.46, z: 0}
+  m_LocalPosition: {x: 0.75, y: 2.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 754134378}
@@ -317,13 +320,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1680264049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 393d4fff694f85241a5364f33c7354e4, type: 3}
+  m_Script: {fileID: 11500000, guid: b375c71462a779841a2e18e075d41515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pad_Num: 1
+  pad_Num: 0
   audioClips:
-  - {fileID: 8300000, guid: d1788daa753e7624e8066271b8875195, type: 3}
-  - {fileID: 8300000, guid: 89a7129de78a8044886770de0618f1af, type: 3}
+  - {fileID: 8300000, guid: 3f2e585f8444ca7438a7d0282b466c3b, type: 3}
+  - {fileID: 8300000, guid: 7f421fb0ecbca92458002ad0e35b3a15, type: 3}
+  - {fileID: 8300000, guid: 5f42f88ff6a4e86448fb0b5603f35a19, type: 3}
+  speech_Times:
+  - rowdata:
+    - 0.3
+    - 0.2
+    - 0.2
+    - 0.4
+  - rowdata:
+    - 0.2
+    - 0.1
+    - 0.3
+    - 0.3
+  - rowdata:
+    - 0.3
+    - 0.4
 --- !u!212 &1680264053
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -565,9 +583,9 @@ GameObject:
   - component: {fileID: 1727243333}
   - component: {fileID: 1727243332}
   - component: {fileID: 1727243334}
-  - component: {fileID: 1727243335}
   - component: {fileID: 1727243337}
   - component: {fileID: 1727243336}
+  - component: {fileID: 1727243335}
   m_Layer: 0
   m_Name: ball03
   m_TagString: Ball
@@ -583,7 +601,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727243330}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 1.64, z: 0}
+  m_LocalPosition: {x: -1.364, y: 2.158, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 754134378}
@@ -686,13 +704,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1727243330}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 393d4fff694f85241a5364f33c7354e4, type: 3}
+  m_Script: {fileID: 11500000, guid: b375c71462a779841a2e18e075d41515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pad_Num: 3
+  pad_Num: 0
   audioClips:
-  - {fileID: 8300000, guid: d1788daa753e7624e8066271b8875195, type: 3}
-  - {fileID: 8300000, guid: 89a7129de78a8044886770de0618f1af, type: 3}
+  - {fileID: 8300000, guid: 4a0f65ce0a371fb4588e2c1a5b00d100, type: 3}
+  - {fileID: 8300000, guid: d3c6fa8ec4318554eae99571d65f52ea, type: 3}
+  - {fileID: 8300000, guid: ac3468ff9b5eaf74aaf075fbf433d277, type: 3}
+  speech_Times:
+  - rowdata:
+    - 0.33
+    - 0.44
+    - 0.6
+  - rowdata:
+    - 0.2
+    - 0.3
+    - 0.2
+    - 0.3
+  - rowdata:
+    - 0.4
+    - 0.3
 --- !u!82 &1727243336
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1002,9 +1034,9 @@ GameObject:
   - component: {fileID: 1855477826}
   - component: {fileID: 1855477824}
   - component: {fileID: 1855477827}
-  - component: {fileID: 1855477825}
   - component: {fileID: 1855477829}
   - component: {fileID: 1855477828}
+  - component: {fileID: 1855477825}
   m_Layer: 0
   m_Name: Ball02
   m_TagString: Ball
@@ -1020,7 +1052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855477822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.49, y: -0.32, z: 0}
+  m_LocalPosition: {x: -0.781, y: 3.689, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 754134378}
@@ -1051,13 +1083,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1855477822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 393d4fff694f85241a5364f33c7354e4, type: 3}
+  m_Script: {fileID: 11500000, guid: b375c71462a779841a2e18e075d41515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pad_Num: 2
+  pad_Num: 0
   audioClips:
-  - {fileID: 8300000, guid: d1788daa753e7624e8066271b8875195, type: 3}
-  - {fileID: 8300000, guid: 89a7129de78a8044886770de0618f1af, type: 3}
+  - {fileID: 8300000, guid: 966ce73d7c348c04cbffc56814e47e40, type: 3}
+  - {fileID: 8300000, guid: ab0633bfd8f6ccc419f224b6ab5c97e4, type: 3}
+  - {fileID: 8300000, guid: cce939f6be8aa9d4a8bcdf74a439eeb1, type: 3}
+  speech_Times:
+  - rowdata:
+    - 0.3
+    - 0.4
+  - rowdata:
+    - 0.4
+  - rowdata:
+    - 0.1
+    - 0.1
+    - 0.3
+    - 0.3
+    - 0.3
 --- !u!212 &1855477826
 SpriteRenderer:
   m_ObjectHideFlags: 0
