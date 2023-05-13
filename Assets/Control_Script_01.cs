@@ -20,6 +20,7 @@ public class Control_Script_01 : MonoBehaviour
     public bool stop_Col;
 
 	public GameObject ball_Ran;
+    GameObject next_Ball;
 
     int lastNumber;
 
@@ -29,7 +30,7 @@ public class Control_Script_01 : MonoBehaviour
     {
         onOff = false;
         stop_Col = false;
-        maxAttempts = 5;
+        maxAttempts = 50;
         
     }
 
@@ -42,25 +43,28 @@ public class Control_Script_01 : MonoBehaviour
        { 
              stop_Col = true;
             onOff = false;
+
             
             listPick = Random.Range(0, paddle.Count);
 	
-    for(int i=0; listPick == lastNumber && i < maxAttempts; i++)
-    {
-        listPick = Random.Range(0, paddle.Count);
-    }
+                for(int i=0; listPick == lastNumber && i < maxAttempts; i++)
+                {
+                listPick = Random.Range(0, paddle.Count);
+                }
 
-        lastNumber = listPick;
+            lastNumber = listPick;
+                
+            next_Ball = paddle[listPick];
 
-            ball_Ran = paddle[listPick];
-
-        // 
-        // 
-
-
-            paddle.Clear();
+                if(next_Ball != ball_Ran)
+                {
+                    ball_Ran = paddle[listPick];
+                    next_Ball = ball_Ran;
+                }
         }
-
+            paddle.Clear();
     }
+
+    
 
 }
